@@ -18,3 +18,9 @@ export interface PieceProps {
     isSelected: boolean;   
 }
 
+export type MoveData = {
+    from: Square;
+    to: Square;
+    promotion?: string;
+};
+
