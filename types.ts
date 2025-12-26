@@ -9,3 +9,8 @@ export interface BoardProps {
     lastMove: { from: Square; to: Square } | null;
 }
 
+export interface PieceProps {
+    type: PieceSymbol;
+    color: Color;
+    
+}
