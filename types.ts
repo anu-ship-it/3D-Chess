@@ -25,5 +25,8 @@ export type MoveData = {
 };
 
 export enum GameStatus {
-    
+    PLAYING = 'playing',
+    CHECKMATE = 'checkmate',
+    DRAW = 'draw',
+    STALEMATE = 'stalemate',
 }
