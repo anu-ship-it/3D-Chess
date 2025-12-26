@@ -4,5 +4,6 @@ export interface BoardProps {
     fen: string;
     onMove: (from: Square, to: Square) => void;
     validMoves: Square[];
+    selectedSquare: Square | null;
     
 }
