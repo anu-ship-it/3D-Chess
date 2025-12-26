@@ -24,3 +24,6 @@ export type MoveData = {
     promotion?: string;
 };
 
+export enum GameStatus {
+    
+}
