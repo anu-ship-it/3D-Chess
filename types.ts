@@ -12,5 +12,9 @@ export interface BoardProps {
 export interface PieceProps {
     type: PieceSymbol;
     color: Color;
-    
+    position: [number, number, number];
+    square: Square;
+    onClick: (e: any) => void;
+    isSelected: boolean;   
 }
+
