@@ -119,7 +119,17 @@ const App = () => {
                 {/* Header */}
                 <div className="pointer-events-auto bg-black/20 backdrop-blur-x1 p-4 rounded-2x1 border border-white/5 shadow-2x1">
                 <h1 className="text-2x1 font-bold tracking-tight text-white/90 drop-shadow-md">Gemini Chess 3D</h1>
-                <div className=""></div>
+                <div className="flex items-center gap-2 mt-2">
+                    <div className={`w-3 h-3 rounded-full ${game.turn() === 'W' ? 'bg-white' : 'bg-black border border-white/20'}`} />
+                    <span className="text-sm font-medium text-gray-200 uppercase tracking-wider">
+                        {game.turn() === 'W' ? 'White to Move' : 'Black to Move'}
+                    </span>
+                    {game.inCheck() && !game.isGameOver() && (
+                        <span className="">
+                            CHECK
+                        </span>
+                    )}
+                </div>
 
                 </div>
             </div>
