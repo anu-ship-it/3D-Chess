@@ -53,6 +53,15 @@ const App = () => {
 
         // 2. Select Piece
         const piece = game.get(square);
-        
-    }
+        if (piece && piece.color === game.turn()) {
+            setSelectedSquare(square);
+            const moves = game.moves({ square, verbose: true }) as Move[];
+            setValidMoves(moves.map(m => m.to));
+        } else {
+            setSelectedSquare(null);
+            setValidMoves([]);
+        }
+    };
+
+    
 }
