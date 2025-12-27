@@ -88,6 +88,16 @@ const App = () => {
         setHint(null);
         setShowHintModal(true);
 
+        const advice = await getChessHint(fen, game.turn());
+        setHint(advice);
+        setIsThinking(false);
+    };
+
+    const toggleView = () => {
+        setBoardView(prev => prev === 'white' ? 'black' : 'white');
+    };
+
+    return (
         
-    }
+    )
 }
