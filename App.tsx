@@ -63,5 +63,12 @@ const App = () => {
         }
     };
 
+    const checkGameStatus = () => {
+        if (game.isCheckmate()) setGameStatus(GameStatus.CHECKMATE);
+        else if (game.isDraw()) setGameStatus(GameStatus.DRAW);
+        else if (game.isStalemate()) setGameStatus(GameStatus.STALEMATE);
+        else setGameStatus(GameStatus.PLAYING);
+    };
+
     
 }
