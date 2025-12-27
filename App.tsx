@@ -110,7 +110,8 @@ const App = () => {
                     lastMove={lastMove}
                     onSquareClick={onSquareClick}
                     turn={game.turn()}
-                    
+                    view={boardView}
+                />    
             </div>
 
         </div>
