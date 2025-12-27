@@ -78,5 +78,9 @@ const App = () => {
         setValidMoves([]);
         setLastMove(null);
         setGameStatus(GameStatus.PLAYING);
-    }
+        setHint(null);
+        setBoardView('white');
+    };
+
+    
 }
