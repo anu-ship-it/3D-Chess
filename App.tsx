@@ -103,6 +103,13 @@ const App = () => {
             {/* 3D Scene Layer */}
             <div className="absolute inset-0 z-0">
                 <ThreeChess
+                    boardState={boardState}
+                    fen={fen}
+                    selectedSquare={selectedSquare}
+                    validMoves={validMoves}
+                    lastMove={lastMove}
+                    onSquareClick={onSquareClick}
+                    turn={game.turn()}
                     
             </div>
 
