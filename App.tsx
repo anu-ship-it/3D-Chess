@@ -70,5 +70,12 @@ const App = () => {
         else setGameStatus(GameStatus.PLAYING);
     };
 
-    
+    const resetGame = () => {
+        const newGame = new Chess();
+        setGame(newGame);
+        setFen(newGame.fen());
+        setSelectedSquare(null);
+        setValidMoves([]);
+        
+    }
 }
