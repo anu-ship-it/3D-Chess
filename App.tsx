@@ -118,7 +118,8 @@ const App = () => {
             <div className="absolute top-0 left-0 w-full p-6 z-10 pointer-events-none flex justify-between items-start">
                 {/* Header */}
                 <div className="pointer-events-auto bg-black/20 backdrop-blur-x1 p-4 rounded-2x1 border border-white/5 shadow-2x1">
-                <h1 className="text"></h1>
+                <h1 className="text-2x1 font-bold tracking-tight text-white/90 drop-shadow-md">Gemini Chess 3D</h1>
+                <div className=""></div>
 
                 </div>
             </div>
