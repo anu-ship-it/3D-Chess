@@ -82,5 +82,12 @@ const App = () => {
         setBoardView('white');
     };
 
-    
+    const handleGetHint = async () => {
+        if (isThinking) return;
+        setIsThinking(true);
+        setHint(null);
+        setShowHintModal(true);
+
+        
+    }
 }
