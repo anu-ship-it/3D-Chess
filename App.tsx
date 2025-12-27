@@ -39,9 +39,20 @@ const App = () => {
                 });
 
                 if (move) {
-                    
+                    setFen(game.fen());
+                    setLastMove({ from: move.from, to: move.to });
+                    setSelectedSquare(null);
+                    setValidMoves([]);
+                    checkGameStatus();
+                    return;
                 }
+            } catch (e) {
+                console.error(e);
             }
         }
+
+        // 2. Select Piece
+        const piece = game.get(square);
+        
     }
 }
