@@ -16,5 +16,14 @@ const App = () => {
     const [boardView, setBoardView] = useState<'white' | 'black'>('white');
 
     // AI Advisor State
+    const [hint, setHint] = useState<string | null>(null);
+    const [isThinking, setIsThinking] = useState(false);
+    const [showHintModel, setShowHintModal] = useState(false);
+
+    // Derived Board State
+    const boardState = useMemo(() => {
+        return game.board();
+    }, [fen]);
+
     
 }
