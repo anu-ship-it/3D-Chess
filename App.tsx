@@ -76,6 +76,7 @@ const App = () => {
         setFen(newGame.fen());
         setSelectedSquare(null);
         setValidMoves([]);
-        
+        setLastMove(null);
+        setGameStatus(GameStatus.PLAYING);
     }
 }
