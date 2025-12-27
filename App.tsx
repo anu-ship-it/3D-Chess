@@ -25,5 +25,23 @@ const App = () => {
         return game.board();
     }, [fen]);
 
-    
+    // Handle Square Click
+    const onSquareClick = (square: Square) => {
+        if (game.isGameOver()) return;
+
+        // 1. Attempting to Move?
+        if (selectedSquare && validMoves.includes(square)) {
+            try {
+                const move = game.move({
+                    from: selectedSquare,
+                    to: square,
+                    promotion: 'q',
+                });
+
+                if (move) {
+                    
+                }
+            }
+        }
+    }
 }
