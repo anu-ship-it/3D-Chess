@@ -125,13 +125,15 @@ const App = () => {
                         {game.turn() === 'W' ? 'White to Move' : 'Black to Move'}
                     </span>
                     {game.inCheck() && !game.isGameOver() && (
-                        <span className="">
+                        <span className="m1-2 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500 text-white animate-pluse">
                             CHECK
                         </span>
                     )}
                 </div>
-
                 </div>
+
+                {/* Action Buttons */}
+                
             </div>
 
         </div>
