@@ -133,7 +133,16 @@ const App = () => {
                 </div>
 
                 {/* Action Buttons */}
-                
+                <div className="flex flex-col gap-3 pointer-events-auto">
+                    <div className="flex gap-3">
+                        <button
+                         onClick={toggleView}
+                         className=""   
+                        >                            
+                        </button>
+                    </div>
+
+                </div>
             </div>
 
         </div>
