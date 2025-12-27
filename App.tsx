@@ -137,7 +137,13 @@ const App = () => {
                     <div className="flex gap-3">
                         <button
                          onClick={toggleView}
-                         className=""   
+                         className="p-3 bg-neutral-900/60 backdrop-blur-md rounded-x1 hover:bg-neutral-800 transition-all shadow-lg border border-white/10 group"
+                         title="Flip Board"   
+                        >
+                            <Rotate3D size={20} className="text-gray-300 group-hover:text-white transition-colors" />           
+                        </button>
+                        <button
+                        
                         >                            
                         </button>
                     </div>
