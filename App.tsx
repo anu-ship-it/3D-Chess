@@ -98,8 +98,14 @@ const App = () => {
     };
 
     return (
-        <div>
-            
+        <div className="w-full h-screen relative flex flex-col bg-neutral-900 text-white overflow-hidden font-sans">
+
+            {/* 3D Scene Layer */}
+            <div className="absolute inset-0 z-0">
+                <ThreeChess
+                    
+            </div>
+
         </div>
     )
 }
