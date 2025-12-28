@@ -13,6 +13,23 @@ export const getChessHint = async (fen: string, turn: 'w' | 'b'): Promise<string
     const color = turn === 'w' ? 'White' : 'Black';
 
     const prompt = `
-        
-    `
-}
+       You are a Chess Gandmaster.
+       Analyze the following chess position in FEN (Forsyth-Edwards Notation): "${fen}".
+       It is ${color}'s turn.
+
+       1. Suggest the single best move for ${color}.
+       2. Briefly explain the strategic reasoning behind this move in 2-3 sentwnces.
+       3. Keep it concise and helpful for a casual player.
+    `;
+
+    try {
+        const response = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: prompt,
+        });
+        return response.text || "No advice available.";
+    } catch (error) {
+        console.error("Gemini Error:", error);
+        return "I couldn't analyze the board right now. Please try again.";
+    }
+};
