@@ -25,5 +25,17 @@ const PieceMaaterial = ({ color, isSelected, isHovered } : { color: Color, isSel
         config: config.default
     });
 
-    
+    return (
+        <animated.meshStandardMaterial
+            color={colorAnim}
+            roughness={0.3}
+            metalness={0.6}
+            emissive={emissive}
+            emissiveIntensity={isSelected ? 0.8 : 0}
+        />    
+    );
+};
+
+// Wrapper for common animation logic
+const AnimatedPieceGroup: React.FC<{
 }
