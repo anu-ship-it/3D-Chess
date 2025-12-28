@@ -1,0 +1,18 @@
+import React, { useState } from 'react';
+import { Color } from 'chess.js';
+import { useSpring, animated, config } from '@react-spring/three';
+
+// Material colors
+const WHITE_COLOR = "#f0f0f0";
+const BLACK_COLOR = "#222222";
+const SELECTED_COLOR = "#6366f1"; // Indigo glow
+
+interface PieceGeometryProps {
+    color: Color;
+    position: [number, number, number];
+    isSelected: boolean;
+    onClick?: () => void;
+    isHovered?: boolean;
+}
+
+// Reusable material setup
