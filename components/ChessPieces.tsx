@@ -39,5 +39,16 @@ const PieceMaaterial = ({ color, isSelected, isHovered } : { color: Color, isSel
 // Wrapper for common animation logic
 const AnimatedPieceGroup: React.FC<{
     position: [number, number, number];
-    
+    children: React.ReactNode;
+    rotation?: [number, number, number];
+    onClick?: () => void;
+    color: Color;
+    isSelected: boolean;
+}> = ({ position, children, rotation = [0, 0, 0], onClick, color, isSelected }) => {
+    const [hovered, setHover] = useState(false);
+
+    // Smooth movement configuration
+    const { pos, rot, scale } = useSpring({
+        
+    })
 }
