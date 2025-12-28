@@ -16,3 +16,10 @@ interface PieceGeometryProps {
 }
 
 // Reusable material setup
+const PieceMaaterial = ({ color, isSelected, isHovered } : { color: Color, isSelected: boolean, isHovered: boolean }) => {
+    const baseColor = color = 'w' ? WHITE_COLOR : BLACK_COLOR;
+
+    const { emissive, colorAnim } = useSpring({
+        
+    })
+}
