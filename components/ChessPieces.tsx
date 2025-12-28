@@ -50,6 +50,36 @@ const AnimatedPieceGroup: React.FC<{
     // Smooth movement configuration
     const { pos, rot, scale } = useSpring({
         pos: [position[0], position[1] + (hovered || isSelected ? 0.3 : 0), position[2]],
-        
-    })
+        rot: rotation,
+        scale: hovered || isSelected ? 1.1 : 1,
+        config: config.gentle // Smoother easing 
+    });
+
+    return (
+        <animated.group
+            position={pos as any}
+            rotation={rot as any}
+            scale={scale}
+            onClick={(e) => {
+                e.stopPropagation();
+                onClick?.();
+            }}
+            onPointerOver={(e) => {
+                e.stopPropagation();
+                setHover(true);
+                document.body.style.cursor = 'pointer';
+            }}
+            onPointerOut={(e) => {
+                e.stopPropagation();
+                setHover(false);
+                document.body.style.cursor = 'auto';
+            }}
+            >
+                {React.Children.map(children, child => {
+                    if (React.isValidElement(child)) {
+                        // @ts-ignore
+                    }
+                })}
+            </animated.group>
+    )
 }
