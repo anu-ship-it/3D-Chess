@@ -20,6 +20,10 @@ const PieceMaaterial = ({ color, isSelected, isHovered } : { color: Color, isSel
     const baseColor = color = 'w' ? WHITE_COLOR : BLACK_COLOR;
 
     const { emissive, colorAnim } = useSpring({
-        
-    })
+        emissive: isSelected ? SELECTED_COLOR : (isHovered ? "#444" : "#000000"),
+        colorAnim: isSelected ? SELECTED_COLOR : baseColor,
+        config: config.default
+    });
+
+    
 }
