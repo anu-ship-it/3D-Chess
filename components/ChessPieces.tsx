@@ -38,4 +38,6 @@ const PieceMaaterial = ({ color, isSelected, isHovered } : { color: Color, isSel
 
 // Wrapper for common animation logic
 const AnimatedPieceGroup: React.FC<{
+    position: [number, number, number];
+    
 }
