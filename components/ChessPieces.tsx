@@ -49,6 +49,7 @@ const AnimatedPieceGroup: React.FC<{
 
     // Smooth movement configuration
     const { pos, rot, scale } = useSpring({
+        pos: [position[0], position[1] + (hovered || isSelected ? 0.3 : 0), position[2]],
         
     })
 }
