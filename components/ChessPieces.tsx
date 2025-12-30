@@ -78,6 +78,7 @@ const AnimatedPieceGroup: React.FC<{
                 {React.Children.map(children, child => {
                     if (React.isValidElement(child)) {
                         // @ts-ignore
+                        
                     }
                 })}
             </animated.group>
