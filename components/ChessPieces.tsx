@@ -87,11 +87,21 @@ const AnimatedPieceGroup: React.FC<{
 };
 
 export const Pawn: React.FC<PieceGeometryProps> = (props) => {
-    return (
-        <AnimatedPieceGroup {...props}>
-            <mesh position={[0, 0.1, 0]} castShadow recieveShadow>
-                    
-            </mesh>     
-        </AnimatedPieceGroup>
-    )
-}
+  return (
+    <AnimatedPieceGroup {...props}>
+      <mesh position={[0, 0.1, 0]} castShadow receiveShadow>
+        <cylinderGeometry args={[0.3, 0.35, 0.2, 32]} />
+        <PieceMaterial color={props.color} isSelected={props.isSelected} isHovered={false} />
+      </mesh>
+      <mesh position={[0, 0.6, 0]} castShadow receiveShadow>
+        <coneGeometry args={[0.2, 0.8, 32]} />
+        <PieceMaterial color={props.color} isSelected={props.isSelected} isHovered={false} />
+      </mesh>
+      <mesh position={[0, 1.0, 0]} castShadow receiveShadow>
+        <sphereGeometry args={[0.2, 32, 32]} />
+        <PieceMaterial color={props.color} isSelected={props.isSelected} isHovered={false} />
+      </mesh>
+    </AnimatedPieceGroup>
+  );
+};
+
