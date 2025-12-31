@@ -87,5 +87,9 @@ const AnimatedPieceGroup: React.FC<{
 };
 
 export const Pawn: React.FC<PieceGeometryProps> = (props) => {
-    
+    return (
+        <AnimatedPieceGroup {...props}>
+            
+        </AnimatedPieceGroup>
+    )
 }
