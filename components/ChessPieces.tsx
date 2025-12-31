@@ -89,7 +89,9 @@ const AnimatedPieceGroup: React.FC<{
 export const Pawn: React.FC<PieceGeometryProps> = (props) => {
     return (
         <AnimatedPieceGroup {...props}>
-            
+            <mesh position={[0, 0.1, 0]} castShadow recieveShadow>
+                    
+            </mesh>     
         </AnimatedPieceGroup>
     )
 }
