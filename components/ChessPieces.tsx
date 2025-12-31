@@ -78,9 +78,11 @@ const AnimatedPieceGroup: React.FC<{
                 {React.Children.map(children, child => {
                     if (React.isValidElement(child)) {
                         // @ts-ignore
-                        return React.cloneElement
+                        return React.cloneElement(child, { isHovered: hovered, isSelected, color });
                     }
+                    return child;
                 })}
             </animated.group>
-    )
-}
+    );
+};
+
