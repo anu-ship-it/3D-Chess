@@ -13,3 +13,6 @@ const BOARD_OFFSET = (BOARD_SIZE * SQUARE_SIZE) / 2 - SQUARE_SIZE / 2;
 
 // --- Helpers ---
 
+const getPosition = (square: Square): [number, number, number] => {
+    const file = square.charCodeAt(0) - 97; // a=0
+    
