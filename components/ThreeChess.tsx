@@ -18,4 +18,8 @@ const getPosition = (square: Square): [number, number, number] => {
     const rank = parseInt(square[1]) - 1; // 1=0
 
     const x = file * SQUARE_SIZE - BOARD_OFFSET;
-    
+    const z = -(rank * SQUARE_SIZE - BOARD_OFFSET);
+
+    return [x, 0, z];
+};
+
