@@ -23,3 +23,6 @@ const getPosition = (square: Square): [number, number, number] => {
     return [x, 0, z];
 };
 
+const getDistance = (sq1: Square, sq2: Square) => {
+    
+}
