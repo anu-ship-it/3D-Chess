@@ -7,3 +7,9 @@ import { useSpring, animated } from '@react-spring/three';
 import * as THREE from 'three';
 
 // --- Constrants ---
+const BOARD_SIZE = 8;
+const SQUARE_SIZE = 1.2;
+const BOARD_OFFSET = (BOARD_SIZE * SQUARE_SIZE) / 2 - SQUARE_SIZE / 2;
+
+// --- Helpers ---
+
