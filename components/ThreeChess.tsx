@@ -27,4 +27,5 @@ const getDistance = (sq1: Square, sq2: Square) => {
     const f1 = sq1.charCodeAt(0);
     const r1 = parseInt(sq1[1]);
     const f2 = sq2.charCodeAt(0);
+    const r2 = 
 }
