@@ -28,4 +28,5 @@ const getDistance = (sq1: Square, sq2: Square) => {
     const r1 = parseInt(sq1[1]);
     const f2 = sq2.charCodeAt(0);
     const r2 = parseInt(sq2[1]);
+    return Math.sqrt(Math.pow(f1 - f2, 2) + Math.pow(r1 - r2, 2));
 }
