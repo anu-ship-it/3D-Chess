@@ -24,5 +24,5 @@ const getPosition = (square: Square): [number, number, number] => {
 };
 
 const getDistance = (sq1: Square, sq2: Square) => {
-    
+    const 
 }
