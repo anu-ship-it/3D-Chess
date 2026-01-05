@@ -29,4 +29,10 @@ const getDistance = (sq1: Square, sq2: Square) => {
     const f2 = sq2.charCodeAt(0);
     const r2 = parseInt(sq2[1]);
     return Math.sqrt(Math.pow(f1 - f2, 2) + Math.pow(r1 - r2, 2));
-}
+};
+
+const generateId = (type: string, color: string) => `${color}-${type}-${Math.random().toString(36).substring(2, 9)}`;
+
+// --- Piece Tracking Hook ---
+// This ensure that when a piece moves, we reuse the same React component (key)
+// so the animation library can interpolate the position changes smoothly.
