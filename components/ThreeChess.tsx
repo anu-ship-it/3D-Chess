@@ -38,7 +38,7 @@ const generateId = (type: string, color: string) => `${color}-${type}-${Math.ran
 // so the animation library can interpolate the position changes smoothly.
 const usePieceTracking = (
     boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][],
-    
+    LastMove: { from: Square, to: Square } | null
 ) => {
 
 }
