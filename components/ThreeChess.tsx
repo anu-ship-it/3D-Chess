@@ -39,4 +39,6 @@ const generateId = (type: string, color: string) => `${color}-${type}-${Math.ran
 const usePieceTracking = (
     boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][],
     
-)
+) => {
+
+}
