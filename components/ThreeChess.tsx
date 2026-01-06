@@ -37,5 +37,6 @@ const generateId = (type: string, color: string) => `${color}-${type}-${Math.ran
 // This ensure that when a piece moves, we reuse the same React component (key)
 // so the animation library can interpolate the position changes smoothly.
 const usePieceTracking = (
+    boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][],
     
 )
