@@ -42,5 +42,13 @@ const usePieceTracking = (
 ) => {
     const prevPieceRef = useRef<Record<string, { square: Square, type: PieceSymbol, color: Color }>>({});
 
-    
+    const trackedPieces = useMemo(() => {
+        // 1. Flatten current board state
+        const newPieces: { square: Square, type: PieceSymbol, color: Color }[] = [];
+        boardState.forEach(row => row.forEach(p => {
+            if(p) newPieces.push(p);
+        }));
+
+        
+    })
 }
