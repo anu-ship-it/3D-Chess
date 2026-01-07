@@ -70,7 +70,13 @@ const usePieceTracking = (
         const distinctKeys = new Set([...Object.keys(newGroups), ...Object.keys(preGroups)]);
 
         distinctKeys.forEach(key => {
-            
+          const oldList = preGroups[key] || [];
+          const newList = newGroups[key] || [];
+          
+          const usedOld = new Set<number>();
+          const usedNew = new Set<number>();
+
+          
         })
     })
 }
