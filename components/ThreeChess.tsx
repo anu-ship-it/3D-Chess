@@ -57,6 +57,15 @@ const usePieceTracking = (
             newGroups[key].push(p);
         });
 
+        // 3. Prepare previous groups
+        const prePieces = prevPieceRef.current;
+        const preGroups: Record<string, { id: string, square: Square, type: PieceSymbol, color: Color }[]> = {};
+        Object.entries(prevPieces).forEach(([id, p]) => {
+            const key = p.color + p.type;
+            if(!preGroups[key]) preGroups[key] = [];
+            prevGroups[key].push({...p, id});
+        });
+
         
     })
 }
