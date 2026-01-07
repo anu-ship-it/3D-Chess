@@ -76,7 +76,7 @@ const usePieceTracking = (
           const usedOld = new Set<number>();
           const usedNew = new Set<number>();
 
-          
+        // A. Exact Match (Piece didn't move)
         })
     })
 }
