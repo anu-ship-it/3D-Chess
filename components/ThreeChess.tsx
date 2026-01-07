@@ -49,6 +49,14 @@ const usePieceTracking = (
             if(p) newPieces.push(p);
         }));
 
+        // 2. Group by TypeColor (e.g., 'wp', 'br')
+        const newGroups: Record<string, typeof newPieces> = {};
+        newPieces.forEach(p => {
+            const key = p.color + p.type;
+            if(!newGroups[key]) newGroups[key] = [];
+            newGroups[key].push(p);
+        });
+
         
     })
 }
