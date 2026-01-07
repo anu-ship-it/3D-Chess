@@ -40,5 +40,7 @@ const usePieceTracking = (
     boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][],
     LastMove: { from: Square, to: Square } | null
 ) => {
+    const prevPieceRef = useRef<Record<string, { square: Square, type: PieceSymbol, color: Color }>>({});
 
+    
 }
