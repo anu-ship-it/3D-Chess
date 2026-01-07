@@ -66,6 +66,11 @@ const usePieceTracking = (
             prevGroups[key].push({...p, id});
         });
 
-        
+        const result: { id: string, square: Square, type: PieceSymbol, color: Color }[] = [];
+        const distinctKeys = new Set([...Object.keys(newGroups), ...Object.keys(preGroups)]);
+
+        distinctKeys.forEach(key => {
+            
+        })
     })
 }
