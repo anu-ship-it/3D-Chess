@@ -77,6 +77,29 @@ const usePieceTracking = (
           const usedNew = new Set<number>();
 
         // A. Exact Match (Piece didn't move)
+        oldList.forEach((o, oIdx) => {
+            const nIdx = newList.findIndex(n, i) => !usedNew.has(i) && n.square === o.square);
+            if(nIdx !== -1) {
+                usedNew.add(nIdx);
+                usedOld.add(oIdx);
+                resourceLimits.push({...newList[nIdx], id: o.id });
+            }
+        });
+
+        // B. Last Move Match (The piece that explicitly moved)
+        if (lastMove) {
+            const { from, to } = lastMove;
+            const oIdx = oldList.findIndex((o, i) => !usedOld.has(i) && o.square === from);
+            const nIdx = newList.findIndex((n, i) => !usedNew.has(i) && n.square === to);
+            if(oIdx !=== -1 && nIdx !== -1) {
+                usedNew.add(nIdx);
+                usedOld.add(oIdx);
+                resourceLimits.push({...newList[nIdx], id: oldList[oIdx].id });
+            }
+        }
+
+        // C. Distance Match (Heuristic for Castlin, displayed pieces, etc.)
+        
         })
     })
 }
