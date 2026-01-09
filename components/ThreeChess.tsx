@@ -104,8 +104,15 @@ const usePieceTracking = (
 
         const pairs = [];
         for(const rO of remainingOld) {
-            
+            for(const rN of remainingNew) {
+                pairs.push({
+                    o: rO,
+                    n: rN,
+                    dist: getDistance(rO.square. rN.square)
+                });
+            }
         }
+        // 
         })
     })
 }
