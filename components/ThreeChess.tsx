@@ -99,7 +99,6 @@ const usePieceTracking = (
         }
 
         // C. Distance Match (Heuristic for Castlin, displayed pieces, etc.)
-        
         })
     })
 }
