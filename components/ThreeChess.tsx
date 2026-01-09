@@ -100,7 +100,12 @@ const usePieceTracking = (
 
         // C. Distance Match (Heuristic for Castlin, displayed pieces, etc.)
         const remainingOld = oldList.map((0, i) => ({ ...o, idx: i })).filter(x => !usedOld.has(x.idx));
-        
+        const remainingNew = newList.map((n, i) => ({ ...n, idx: i})).filter(x => !usedNew.has(x.idx));
+
+        const pairs = [];
+        for(const rO of remainingOld) {
+            
+        }
         })
     })
 }
