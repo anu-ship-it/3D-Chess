@@ -99,6 +99,8 @@ const usePieceTracking = (
         }
 
         // C. Distance Match (Heuristic for Castlin, displayed pieces, etc.)
+        const remainingOld = oldList.map((0, i) => ({ ...o, idx: i })).filter(x => !usedOld.has(x.idx));
+        
         })
     })
 }
