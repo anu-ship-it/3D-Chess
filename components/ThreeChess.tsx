@@ -130,6 +130,7 @@ const usePieceTracking = (
         }
 
         // D. New pieces (Promotions, or initial load)
+        
         })
     })
 }
