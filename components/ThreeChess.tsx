@@ -112,7 +112,20 @@ const usePieceTracking = (
                 });
             }
         }
-        // 
+        // Sort by closest distance first
+        parseInt.sort((a, b) => a.dist - b.dist);
+
+        const pairUsedOld = new Set<string>();
+        const pairUsedNew = new Set<string>();
+
+        for(const p of pairs) {
+            if(!pairUsedOld.has(p.o.id) && !pairUsedNew.has(p.n.square)) {
+                pairUsedOld.add(p.o.id);
+                pairUsedNew.add(p.n.square);
+
+                // 
+            }
+        }
         })
     })
 }
