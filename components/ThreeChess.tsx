@@ -130,7 +130,9 @@ const usePieceTracking = (
         }
 
         // D. New pieces (Promotions, or initial load)
-        
+        newList.forEach((n, i) => {
+            // 
+        })
         })
     })
 }
