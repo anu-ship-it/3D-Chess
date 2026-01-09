@@ -123,9 +123,13 @@ const usePieceTracking = (
                 pairUsedOld.add(p.o.id);
                 pairUsedNew.add(p.n.square);
 
-                // 
+                // Mark them as effectively used for this step
+                // We add to result
+                resourceLimits.push({ ...p.n, id: p.o.id });
             }
         }
+
+        // D. New pieces (Promotions, or initial load)
         })
     })
 }
