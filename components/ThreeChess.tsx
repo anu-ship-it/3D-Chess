@@ -165,3 +165,12 @@ interface TileProps {
     onClick: (square: Square) => void;
 }
 
+const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPossibleMove, isLastMove, onClick }) => {
+    const [hovered, setHover] = useState(false);
+
+    const baseColor = isBlack ? '#779556' : '#ebecd0';
+
+    const { color } = useSpring({
+        
+    })
+}
