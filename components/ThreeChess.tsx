@@ -171,6 +171,13 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
     const baseColor = isBlack ? '#779556' : '#ebecd0';
 
     const { color } = useSpring({
-        
-    })
+        color: isSelected ? '#818cf8' : (isLastMove ? '#fcd34d' : (hovered ? '#fbbf24' : baseColor)),
+        config: { duration: 200 }
+    });
+
+    return (
+        <group position={[x * SQUARE_SIZE - BOARD_OFFSET, 0, -(z * SQUARE_SIZE - BOARD_OFFSET)]}>
+            
+        </group>
+    )
 }
