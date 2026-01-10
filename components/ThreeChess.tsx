@@ -177,7 +177,15 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
 
     return (
         <group position={[x * SQUARE_SIZE - BOARD_OFFSET, 0, -(z * SQUARE_SIZE - BOARD_OFFSET)]}>
+           <animated.mesh
+             receiveShadow
+             onClick={(e) => { e.stopPropagation(); onClick(squareName); }}
+             onPointerOver={() => setHover(true)}
+             onPointerOut={() => setHover(false)}
+             postion={[0, -0.05, 0]}
+           >
             
+            </animated.mesh>   
         </group>
     )
 }
