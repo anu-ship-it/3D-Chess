@@ -140,6 +140,28 @@ const usePieceTracking = (
         });
         });
 
-        
-    })
+        // Update Ref for next render
+        const nextMap: Record<string, any> = {};
+        result.forEach(r => nextMap[r.id] = r);
+        prevPiecesRef.current = nextMap;
+
+        return result;
+    
+    }, [boardState, LastMove]);
+
+    return trackedPieces;
+};
+
+// --- Sub-Components ---
+
+interface TileProps {
+    x: number;
+    z: number;
+    isBlack: boolean;
+    squareName: Square;
+    isSelected: boolean;
+    isPossibleMove: boolean;
+    isLastMove: boolean;
+    onClick: (square: Square) => void;
 }
+
