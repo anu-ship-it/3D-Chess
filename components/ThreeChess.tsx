@@ -184,8 +184,15 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
              onPointerOut={() => setHover(false)}
              postion={[0, -0.05, 0]}
            >
-            
-            </animated.mesh>   
+              <boxGemoetry args={[SQUARE_SIZE, 0.1, SQUARE_SIZE]} />
+              <animated.meshStandardMaterial
+                color={color}
+                roughness={0.6}
+                metalness={0.1}
+              />  
+            </animated.mesh> 
+
+              {/*  */}
         </group>
     )
 }
