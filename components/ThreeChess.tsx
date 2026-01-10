@@ -134,8 +134,12 @@ const usePieceTracking = (
             // If not match in previous steps, verify if it's already in result
             // (It shouldn't be if we check usedNew correctly, but pair matching was separate)
             const aleradyInResult = result.find(r => r.square === n.square && r.type === n.type && r.color === n.color);
-            
-        })
-        })
+            if (!aleradyInResult) {
+                result.push({ ...n, id: generateId(n.type, n.color) });
+            }
+        });
+        });
+
+        
     })
 }
