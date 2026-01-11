@@ -194,7 +194,8 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
 
               {/* Possible Move Indicator - Floating Ring */}
               {isPossibleMove && {
-                
+                <group position={[0, 0.05, 0]}>
+                    
               }}
         </group>
     )
