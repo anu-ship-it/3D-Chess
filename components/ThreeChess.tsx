@@ -193,7 +193,6 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
             </animated.mesh> 
 
               {/* Possible Move Indicator - Floating Ring */}
-              
         </group>
     )
 }
