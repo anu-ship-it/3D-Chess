@@ -197,6 +197,12 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                 <group position={[0, 0.05, 0]}>
                   <Flaot speed={4} rotationIntensity={0} floatIntensity={0.2} floatingRange={[0, 0.1]}>
                     <mesh rotation={[-Math.PI / 2, 0, 0]}>
+                    <ringGeometry args={[0.35, 0.45, 32]} />
+                    <meshBasicMaterial color="black" transparent opacity={0.15} />
+                    </mesh>
+                    <mesh rotation={[-Math.PI / 2, 0, 0]}>
+                        <circleGeometry args={[0.2, 32]} />
+                        <
                     </mesh>
                   </Flaot>
               }}
