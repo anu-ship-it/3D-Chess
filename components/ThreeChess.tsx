@@ -211,7 +211,28 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
             {/* Coordinate Labels */}
             {z === 0 && ( // Rank 1 (Bottom)
                 <Text
-                    
+                    position={[0, 0.06, SQUARE_SIZE/2 - 0.1]}
+                    rotation={[-Math.PI/2, 0, 0]}
+                    fontSize={0.25}
+                    color={isBlack ? "#ebecd0" : "#779556"}
+                    anchorY="bottom"
+                    fontWeight="bold">
+                    {String.fromCharCode(97 + x)}    
+                </Text>
             )}
-    )
-}
+             {x === 0 && ( // File A (left)
+                <Text
+                    position={[-SQUARE_SIZE/2 + 0.1, 0.06, 0]}
+                    rotation={[-Math.PI/2, 0, 0]}
+                    fontSize={0.25}
+                    color={isBlack ? "#ebecd0" : "#779556"}
+                    anchorX="Left"
+                    fontWeight="bold">
+                    {z + 1}    
+                </Text>
+            )}
+          </group>  
+        );
+       };
+
+       
