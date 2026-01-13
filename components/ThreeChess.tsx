@@ -202,10 +202,13 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     </mesh>
                     <mesh rotation={[-Math.PI / 2, 0, 0]}>
                         <circleGeometry args={[0.2, 32]} />
-                        <
+                        <meshBasicMaterial color="#818cf8" transparent opacity={0.4} />
                     </mesh>
                   </Flaot>
-              }}
-        </group>
+               </group>
+            }}
+            
+            {/* Coordinate Labels */}
+            
     )
 }
