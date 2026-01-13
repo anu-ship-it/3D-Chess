@@ -209,6 +209,9 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
             }}
             
             {/* Coordinate Labels */}
-            
+            {z === 0 && ( // Rank 1 (Bottom)
+                <Text
+                    
+            )}
     )
 }
