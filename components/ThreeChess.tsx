@@ -235,4 +235,13 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
         );
        };
 
+       interface Board3dProps {
+          fen: string;
+          selectedSquare: Square | null;
+          validMoves: Square[];
+          LastMove: { from: Square, to: Square } | null;
+          onSquareClick: (sq: Square) => void;
+          boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][]; 
+       }
+
        
