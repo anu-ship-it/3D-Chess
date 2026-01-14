@@ -282,5 +282,18 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
             //  --- Pieces Generation using Tracking Hook ---
             const trackedPieces = usePieceTracking(boardState, lastMove);
 
-            
+            const pieces = trackedPieces.map((p) => {
+                const Component = 
+                   p.type === 'p' ? Pieces.Pawn :
+                   p.type === 'r' ? Pieces.Rook :
+                   p.type === 'n' ? Pieces.Knight :
+                   p.type === 'b' ? Pieces.Bishop :
+                   p.type === 'q' ? Pieces.Queen :
+                   Pieces.King;
+
+                return (
+                    <Component
+                        key={p.id} // Stable ID en
+                )   
+            })
         }
