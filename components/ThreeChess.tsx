@@ -244,4 +244,20 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
           boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][]; 
        }
 
-       
+       const Board3D: React.FC<Board3dProps> = ({
+        selectedSquare,
+        validMoves,
+        LastMove,
+        onSquareClick,
+        boardState
+        }) => {
+
+            // --- Tiles Generation ---
+             const tiles = [];
+             for (let x = 0; x < 8; x++) {
+                for (let z = 0; z < 8; z++) {
+                    const squareName = `${String.fromCharCode(97 + x)}${z + 1}` as Square;
+                    
+                }
+             }
+        }
