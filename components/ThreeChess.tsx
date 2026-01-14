@@ -311,7 +311,23 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     </mesh>
 
                     {/* Reflective Base Board */}
-                    
+                    <mesh position={[0, -0.11, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+                        <planeGeometry args={[SQUARE_SIZE * 8 + 0.4, SQUARE_SIZE * 8 + 0.4]} />
+                        <MeshReflectorMaterial
+                            mirror={1}
+                            blur={[400, 100]}
+                            resolution={1024}
+                            mixBlur={1}
+                            mixStrength={15}
+                            depthScale={1}
+                            minDepthThreshold={0.85}
+                            color="#151515"
+                            metalness={0.6}
+                            roughness={0.4}
+                        />    
+                    </mesh>
+
+                    {/* Tiles Container */}
                 </group>
             )
         }
