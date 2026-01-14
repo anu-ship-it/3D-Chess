@@ -279,5 +279,8 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
              }
 
 
-            //  
+            //  --- Pieces Generation using Tracking Hook ---
+            const trackedPieces = usePieceTracking(boardState, lastMove);
+
+            
         }
