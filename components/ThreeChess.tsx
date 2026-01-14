@@ -293,7 +293,25 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
 
                 return (
                     <Component
-                        key={p.id} // Stable ID en
-                )   
-            })
+                        key={p.id} // Stable ID ensures correct component reuse and smooth animation
+                        position={getPosition(p.square)}
+                        color={p.color}
+                        isSelected={selectedSquare === p.square}
+                        onClick={() => onSquareClick(p.square)}
+                    />    
+                );   
+            });
+
+            return (
+                <group>
+                    {/* Board Frame */}
+                    <mesh position={[0, -0.22, 0]} recciveShadow>
+                        <boxGeometry args={[SQUARE_SIZE * 8 + 1.2, 0.24, SQUARE_SIZE * 8 + 1.2]} />
+                        <meshStandardMaterial color="#2d1b0f" roughness={0.6} />
+                    </mesh>
+
+                    {/* Reflective Base Board */}
+                    
+                </group>
+            )
         }
