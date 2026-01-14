@@ -263,7 +263,21 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     const isPossibleMove = validMoves.includes(squareName);
                     const isLastMove = LastMove ? (LastMove.from === squareName || LastMove.to === squareName) : false;
 
-                    
+                    tiles.push(
+                        <Tile
+                          Key={squareName}
+                          x={x}
+                          z={z}
+                          isBlack={isBlack}
+                          squareName={squareName}
+                          isPossibleMove={isPossibleMove}
+                          isLastMove={isLastMove}
+                          onClick={onSquareClick}
+                        />  
+                    );
                 }
              }
+
+
+            //  
         }
