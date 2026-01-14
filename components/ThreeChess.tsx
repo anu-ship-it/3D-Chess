@@ -257,6 +257,9 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
              for (let x = 0; x < 8; x++) {
                 for (let z = 0; z < 8; z++) {
                     const squareName = `${String.fromCharCode(97 + x)}${z + 1}` as Square;
+                    const isBlack = (x + z) % 2 !== 1;
+
+                    const isSelected = selectedSquare === squareName;
                     
                 }
              }
