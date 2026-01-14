@@ -260,6 +260,9 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     const isBlack = (x + z) % 2 !== 1;
 
                     const isSelected = selectedSquare === squareName;
+                    const isPossibleMove = validMoves.includes(squareName);
+                    const isLastMove = LastMove ? (LastMove.from === squareName || LastMove.to === squareName) : false;
+
                     
                 }
              }
