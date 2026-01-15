@@ -339,4 +339,11 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
         };
 
         // --- Controls Component ---
-        
+        const CameraController: React.FC<{ view: 'White' | 'black' }> = ({ view }) => {
+            const { camera } = useThree();
+
+            useEffect(() => {
+                const newPos = view === 'white' ? new THREE.Vector3(0, 12, 12) : new THREE.Vector3(0, 12, -12);
+                
+            })
+        }
