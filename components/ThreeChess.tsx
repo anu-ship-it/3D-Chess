@@ -344,6 +344,18 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
 
             useEffect(() => {
                 const newPos = view === 'white' ? new THREE.Vector3(0, 12, 12) : new THREE.Vector3(0, 12, -12);
-                
+                const startPos = camera.position.clone();
+                let frame = 0;
+                const duration = 60;
+
+                const animate = () => {
+                    frame++;
+                    const t = frame / duration;
+                    const ease = 1 -Math.pow(1 - t, 3); // Cubic out
+
+                    if (t <= 1) {
+                        
+                    }
+                }
             })
         }
