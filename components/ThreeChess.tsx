@@ -328,6 +328,15 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     </mesh>
 
                     {/* Tiles Container */}
+                    <group position={[0, 0.01, 0]}>
+                        {tiles}
+                    </group>
+
+                    {/* Pieces Container */}
+                    {pieces}
                 </group>
-            )
-        }
+            );
+        };
+
+        // --- Controls Component ---
+        
