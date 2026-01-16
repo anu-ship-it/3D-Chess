@@ -384,7 +384,20 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                 <Canvas shadows camera={[ position: [0, 12, 12], fov: 45]} dpr={[1, 2]}>
                     <color attach="background"  args={["#0f172a"]} />
 
-                    {/*  */}
+                    {/* Cinematic Lighting */}
+                    <ambientLight intensity={0.2} />
+                    <spotLight
+                        position={[10, 20, 10]}
+                        angle={0.5}
+                        penumbra={1}
+                        intensity={2}
+                        castShadow
+                        shadow-bias={-0.0001}
+                    />
+                    <pointLight position={[-10, 5, -10]} intensity={1} color="#4f46e5" />
+                    <pointLight position={[10, 5, 10]} intensity={1} color="#f59e0b" />
+
+                    {/* Environment */}
               </div>
             )
             }
