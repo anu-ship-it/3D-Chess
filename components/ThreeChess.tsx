@@ -366,6 +366,20 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
             return <OrbitControls minDistance={5} maxDistance={20} enablePan={false} maxPolarAngle={Math.PI / 2.2} />;
         }
 
+
         interface ThreeChessProps {
-            
+            boardState: ({ type: PieceSymbol, color: Color, square: Square } | null)[][];
+            fen: string;
+            selectedSquare: Square | null;
+            validMoves: Square[];
+            LastMove: { from: Square, to: Square } | null;
+            onSquareClick: (sq: Square) => void;
+            turn: Color;
+            view: 'White' | 'black';
         }
+
+        const ThreeChess: React.FC<ThreeChessProps> = (props) => {
+            return (
+                
+            )
+            }
