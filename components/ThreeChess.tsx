@@ -380,6 +380,11 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
 
         const ThreeChess: React.FC<ThreeChessProps> = (props) => {
             return (
-              <div 
+              <div className="w-full h-full absolute insert-0 bg-neutral-900">
+                <Canvas shadows camera={[ position: [0, 12, 12], fov: 45]} dpr={[1, 2]}>
+                    <color attach="background"  args={["#0f172a"]} />
+
+                    {/*  */}
+              </div>
             )
             }
