@@ -354,8 +354,18 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     const ease = 1 -Math.pow(1 - t, 3); // Cubic out
 
                     if (t <= 1) {
-                        
+                     camera.position.LerpVectors(startPos, newPos, ease);
+                     camera.lookAt(0, 0, 0);
+                     requestAnimationFrame(animate);   
                     }
-                }
-            })
+                };
+                animate();
+
+            }, [view, camera]);
+
+            return <OrbitControls minDistance={5} maxDistance={20} enablePan={false} maxPolarAngle={Math.PI / 2.2} />;
+        }
+
+        interface ThreeChessProps {
+            
         }
