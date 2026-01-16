@@ -380,6 +380,6 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
 
         const ThreeChess: React.FC<ThreeChessProps> = (props) => {
             return (
-                
+                <div 
             )
             }
