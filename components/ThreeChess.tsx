@@ -402,7 +402,12 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     <Environment preset="city" blur={0.6} />
                     <fog attach="fog" args={['#0f172a', 10, 50]} />
 
-                    
+                    {/* Game Content */}
+                    <Board3D {...props} />
+
+                    {/* Controls */}
+                    <ContactShadows resolution={1024} scale={40} blur={2} opacity={0.4} far={4} color="#000000" />
+                    </Canvas>
               </div>
-            )
-            }
+            );
+        };
