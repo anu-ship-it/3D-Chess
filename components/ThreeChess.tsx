@@ -398,6 +398,10 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     <pointLight position={[10, 5, 10]} intensity={1} color="#f59e0b" />
 
                     {/* Environment */}
+                    <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+                    <Environment preset="city" blur={0.6} />
+                    <fog attach="fog" args={['#0f172a', 10, 50]} />
+
                     
               </div>
             )
