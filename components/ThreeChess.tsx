@@ -398,6 +398,7 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
                     <pointLight position={[10, 5, 10]} intensity={1} color="#f59e0b" />
 
                     {/* Environment */}
+                    
               </div>
             )
             }
