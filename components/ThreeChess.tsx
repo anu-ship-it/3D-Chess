@@ -411,3 +411,5 @@ const Tile: React.FC<TileProps> = ({ x, z, isBlack, squareName, isSelected, isPo
               </div>
             );
         };
+
+        export default ThreeChess;
